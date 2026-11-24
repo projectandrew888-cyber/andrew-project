@@ -1,0 +1,812 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Eurotech Renewables Ltd — Trade &amp; Commercial Heat Pump Partners Ireland</title>
+<meta name="description" content="Eurotech Renewables Ltd — trade & commercial partner for heat pumps and eco4 RADIANT underfloor heating in Ireland. System supply, heat loss design, Part L & A2 BER compliance, on-site commissioning.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231B5E20'/%3E%3Ctext x='26' y='44' font-family='Arial,sans-serif' font-size='34' font-weight='800' fill='white'%3EE%3C/text%3E%3Crect x='42' y='42' width='12' height='12' rx='3' fill='%23C81E1E'/%3E%3C/svg%3E"><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        brand: {
+          green: '#157A3C',
+          deep: '#1B5E20',
+          forest: '#0B2E19',
+          red: '#C81E1E',
+          reddark: '#B91C1C',
+          ink: '#1E293B',
+          mist: '#F8FAFC'
+        }
+      },
+      fontFamily: {
+        display: ['Montserrat', 'sans-serif'],
+        body: ['"Open Sans"', 'sans-serif']
+      }
+    }
+  }
+}
+</script>
+<style>
+  :root{
+    --green:#157A3C; --deep:#1B5E20; --red:#C81E1E; --reddark:#B91C1C;
+    --ink:#1E293B; --ink-2:#475569; --mist:#F8FAFC; --line:#E2E8F0;
+  }
+  html{scroll-padding-top:92px}
+  body{font:16px/1.65 "Open Sans",sans-serif;color:var(--ink);background:#fff;-webkit-font-smoothing:antialiased}
+  ::selection{background:var(--green);color:#fff}
+  :focus-visible{outline:3px solid rgba(21,122,60,.55);outline-offset:2px;border-radius:4px}
+  button,[role=button],a,select,label{cursor:pointer}
+  input,select,textarea{cursor:text}
+  select{cursor:pointer}
+
+  /* ---------- mini-title with line prefix ---------- */
+  .mini-title{display:flex;align-items:center;gap:14px;font-family:Montserrat,sans-serif;font-weight:700;
+    font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--green)}
+  .mini-title::before{content:"";width:48px;height:2px;background:var(--green);flex:none}
+  .mini-title--light{color:#7BD2A0}
+  .mini-title--light::before{background:#7BD2A0}
+
+  /* ---------- Ken Burns hero slideshow (3 slides / 18s cycle) ---------- */
+  .kb-slide{position:absolute;inset:0;opacity:0}
+  .kb-slide:first-child{opacity:1}
+  .kb-slide img{width:100%;height:100%;object-fit:cover}
+  .js .kb-slide{animation:kbCycle 18s infinite}
+  .js .kb-slide:nth-child(1){animation-delay:0s}
+  .js .kb-slide:nth-child(2){animation-delay:6s}
+  .js .kb-slide:nth-child(3){animation-delay:12s}
+  @keyframes kbCycle{
+    0%{opacity:0;transform:scale(1.08)}
+    4%{opacity:1}
+    33%{opacity:1;transform:scale(1.0)}
+    38%{opacity:0;transform:scale(1.0)}
+    100%{opacity:0}
+  }
+
+  /* ---------- hero entrance (staggered, transform/opacity only) ---------- */
+  .js .hero-anim{opacity:0;transform:translateY(18px)}
+  .js .hero-anim.in{opacity:1;transform:none;transition:opacity .55s ease-out,transform .55s ease-out}
+
+  /* ---------- scroll reveal (content visible by default without JS) ---------- */
+  .js .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease-out,transform .6s ease-out}
+  .js .reveal.in-view{opacity:1;transform:none}
+
+  /* ---------- primary CTA slide-up label swap ---------- */
+  .btn-slide{position:relative;overflow:hidden;display:inline-flex}
+  .btn-slide .lbl{display:block;transition:transform .28s cubic-bezier(.4,0,.2,1)}
+  .btn-slide .lbl-alt{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+    transform:translateY(100%);transition:transform .28s cubic-bezier(.4,0,.2,1)}
+  .btn-slide:hover .lbl,.btn-slide:focus-visible .lbl{transform:translateY(-100%)}
+  .btn-slide:hover .lbl-alt,.btn-slide:focus-visible .lbl-alt{transform:translateY(0)}
+
+  /* ---------- sector tabs ---------- */
+  .tab-btn{transition:background-color .15s linear,color .15s linear,border-color .15s linear}
+  .tab-panel{transition:opacity .3s ease,transform .3s ease}
+  .tab-panel.switching{opacity:0;transform:translateY(10px)}
+
+  /* ---------- header shrink on scroll ---------- */
+  .site-header .header-inner{transition:padding .3s ease}
+  .site-header.scrolled .header-inner{padding-top:.65rem;padding-bottom:.65rem}
+  .site-header.scrolled{box-shadow:0 1px 0 var(--line),0 8px 24px -18px rgba(15,23,42,.35)}
+
+  /* ---------- custom square bullets ---------- */
+  .sq-list li{position:relative;padding-left:1.5rem}
+  .sq-list li::before{content:"";position:absolute;left:0;top:.62em;width:7px;height:7px;background:var(--green)}
+
+  /* ---------- mobile tab rail: edge-to-edge scroll, no visible scrollbar ---------- */
+  .tab-rail{scrollbar-width:none;-ms-overflow-style:none}
+  .tab-rail::-webkit-scrollbar{display:none}
+
+  /* ---------- process connector ---------- */
+  @media (min-width:1024px){
+    .process-grid{position:relative}
+    .process-grid::before{content:"";position:absolute;top:34px;left:12.5%;right:12.5%;height:2px;
+      background:repeating-linear-gradient(90deg,var(--line) 0 10px,transparent 10px 18px)}
+  }
+
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    *,*::before,*::after{animation:none!important;transition:none!important}
+    .js .kb-slide{animation:none!important}
+    .js .kb-slide:first-child{opacity:1}
+    .js .hero-anim,.js .reveal{opacity:1;transform:none}
+  }
+</style>
+</head>
+<body class="font-body text-brand-ink bg-white antialiased">
+
+<a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:z-[60] focus:bg-brand-deep focus:text-white focus:px-4 focus:py-2">Skip to main content</a>
+
+<!-- ============ TOP CONTACT BAR ============ -->
+<div class="bg-brand-forest text-white text-[13px]">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-center sm:justify-between gap-3 py-2">
+    <p class="flex items-center gap-2">
+      <svg class="w-3.5 h-3.5 text-[#7BD2A0] flex-none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <span>Trade &amp; Commercial Desk: <a href="tel:+353429749479" class="font-semibold underline-offset-2 hover:underline">+353 (0) 42 974 9479</a></span>
+    </p>
+    <p class="hidden sm:flex items-center gap-2 text-white/80">
+      <svg class="w-3.5 h-3.5 text-[#7BD2A0]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+      Nationwide Delivery Across Ireland
+    </p>
+  </div>
+</div>
+
+<!-- ============ STICKY HEADER ============ -->
+<header class="site-header sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-[#E2E8F0]">
+  <div class="header-inner max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-4 py-3.5">
+    <a href="#top" class="flex items-center gap-3 flex-none" aria-label="Eurotech Renewables — back to top">
+      <span class="w-10 h-10 rounded-lg bg-gradient-to-br from-brand-green to-brand-deep flex items-center justify-center relative flex-none" aria-hidden="true">
+        <span class="font-display font-extrabold text-white text-xl leading-none">E</span>
+        <span class="absolute bottom-1 right-1 w-2 h-2 bg-brand-red rounded-[2px]"></span>
+      </span>
+      <span class="leading-tight">
+        <span class="block font-display font-extrabold tracking-tight text-brand-deep text-lg">EUROTECH <span class="text-brand-red">RENEWABLES</span></span>
+        <span class="block text-[10px] font-semibold tracking-[0.22em] uppercase text-brand-green">Climate &amp; Energy Solutions</span>
+      </span>
+    </a>
+    <nav class="hidden lg:flex items-center gap-7 text-[14px] font-semibold text-brand-ink" aria-label="Primary">
+      <a href="#sectors" data-sector-link="0" class="hover:text-brand-green transition-colors">Plumbers</a>
+      <a href="#sectors" data-sector-link="1" class="hover:text-brand-green transition-colors">Architects</a>
+      <a href="#sectors" data-sector-link="2" class="hover:text-brand-green transition-colors">Builders</a>
+      <a href="#sectors" data-sector-link="3" class="hover:text-brand-green transition-colors">Industrial</a>
+      <a href="#why-partner" class="hover:text-brand-green transition-colors">Why Partner With Us</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <a href="#partner-form" class="btn-slide hidden sm:inline-flex items-center rounded-lg bg-brand-red px-5 py-2.5 text-sm font-bold text-white shadow-sm transition-colors hover:bg-brand-reddark">
+        <span class="lbl">Open a Trade Account</span>
+        <span class="lbl-alt" aria-hidden="true">Open a Trade Account</span>
+      </a>
+      <button id="menu-btn" type="button" class="lg:hidden inline-flex items-center justify-center w-11 h-11 rounded-lg border border-[#E2E8F0] text-brand-ink" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+        <svg id="menu-icon-open" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        <svg id="menu-icon-close" class="w-5 h-5 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+  </div>
+  <!-- mobile menu -->
+  <div id="mobile-menu" class="hidden lg:hidden border-t border-[#E2E8F0] bg-white">
+    <nav class="px-4 py-4 flex flex-col gap-1 text-[15px] font-semibold" aria-label="Mobile">
+      <a href="#sectors" data-sector-link="0" class="mobile-link rounded-lg px-3 py-3 hover:bg-brand-mist">Plumbers &amp; Heating Contractors</a>
+      <a href="#sectors" data-sector-link="1" class="mobile-link rounded-lg px-3 py-3 hover:bg-brand-mist">Architects &amp; M&amp;E Engineers</a>
+      <a href="#sectors" data-sector-link="2" class="mobile-link rounded-lg px-3 py-3 hover:bg-brand-mist">Builders &amp; Developers</a>
+      <a href="#sectors" data-sector-link="3" class="mobile-link rounded-lg px-3 py-3 hover:bg-brand-mist">Industrial &amp; Commercial</a>
+      <a href="#why-partner" class="mobile-link rounded-lg px-3 py-3 hover:bg-brand-mist">Why Partner With Us</a>
+      <a href="#partner-form" class="mobile-link mt-2 rounded-lg bg-brand-red px-3 py-3 text-center font-bold text-white">Open a Trade Account</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ============ B2B HERO ============ -->
+<section id="top" class="relative overflow-hidden bg-brand-forest">
+  <div class="absolute inset-0" aria-hidden="true">
+    <div class="kb-slide"><img src="images/hero-1.jpg" alt="" fetchpriority="high"></div>
+    <div class="kb-slide"><img src="images/hero-2.jpg" alt=""></div>
+    <div class="kb-slide"><img src="images/hero-3.jpg" alt=""></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-[#071F12]/95 via-[#0B2E19]/85 to-[#0B2E19]/45"></div>
+  </div>
+
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28 lg:py-32">
+    <div class="max-w-3xl">
+      <p class="hero-anim inline-flex items-center gap-2 rounded-full border border-[#7BD2A0]/40 bg-white/5 px-4 py-1.5 text-[11px] sm:text-xs font-bold tracking-[0.18em] uppercase text-[#7BD2A0]">
+        Trade &amp; Commercial Partnerships — Ireland
+      </p>
+      <h1 class="hero-anim mt-6 font-display font-extrabold tracking-tight text-white text-4xl sm:text-5xl lg:text-[3.4rem] leading-[1.08]">
+        Your Reliable Heat Pump &amp; Underfloor Heating Partner for <span class="text-[#7BD2A0]">Commercial &amp; Trade Projects</span>
+      </h1>
+      <p class="hero-anim mt-6 max-w-2xl text-lg text-white/85 leading-relaxed">
+        Complete system supply, full heat loss design, Part&nbsp;L &amp; A2 BER compliance, and on-site commissioning support across Ireland.
+      </p>
+      <div class="hero-anim mt-9 flex flex-col sm:flex-row gap-4">
+        <a href="#partner-form" class="btn-slide items-center justify-center rounded-lg bg-brand-red px-7 py-4 text-base font-bold text-white shadow-lg shadow-black/20 transition-colors hover:bg-brand-reddark">
+          <span class="lbl">Apply for a Trade Account</span>
+          <span class="lbl-alt" aria-hidden="true">Apply for a Trade Account</span>
+        </a>
+        <a href="#partner-form" class="inline-flex items-center justify-center rounded-lg border-2 border-[#7BD2A0] px-7 py-4 text-base font-bold text-white transition-colors hover:bg-brand-green/30">
+          Request Commercial Quote
+          <svg class="ml-2 w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+        </a>
+      </div>
+      <p class="hero-anim mt-8 flex items-center gap-2.5 text-sm text-white/70">
+        <svg class="w-4 h-4 text-[#C9A45C]" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 4.9 5.4.8-3.9 3.8.9 5.4-4.8-2.5-4.8 2.5.9-5.4L4.2 7.7l5.4-.8L12 2z"/></svg>
+        SEAI Energy Awards 2026 Winner — Low Carbon Technologies Innovation
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TRUST STRIP ============ -->
+<section class="bg-white border-b border-[#E2E8F0]" aria-label="Credentials">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-5">
+    <div class="reveal flex items-center gap-3">
+      <svg class="w-6 h-6 text-brand-green flex-none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+      <span class="font-semibold text-[15px]">SEAI Registered &amp; Compliant</span>
+    </div>
+    <div class="reveal flex items-center gap-3">
+      <svg class="w-6 h-6 text-brand-green flex-none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 12h6M9 16h6M13 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V9l-6-6z"/><path d="M13 3v6h6"/></svg>
+      <span class="font-semibold text-[15px]">Part L &amp; NZEB Ready</span>
+    </div>
+    <div class="reveal flex items-center gap-3">
+      <svg class="w-6 h-6 text-brand-green flex-none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M1 8h14v9H1zM15 11h4l4 4v2h-8z"/><circle cx="6" cy="19" r="2"/><circle cx="18" cy="19" r="2"/></svg>
+      <span class="font-semibold text-[15px]">Nationwide Irish Stock &amp; Delivery</span>
+    </div>
+    <div class="reveal flex items-center gap-3">
+      <svg class="w-6 h-6 text-brand-green flex-none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>
+      <span class="font-semibold text-[15px]">Dedicated Technical Desk</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTOR SELECTOR ============ -->
+<section id="sectors" class="bg-brand-mist py-20 sm:py-24">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="reveal max-w-3xl">
+      <p class="mini-title">Who We Work With</p>
+      <h2 class="mt-4 font-display font-extrabold tracking-tight text-brand-deep text-3xl sm:text-4xl leading-tight">Four Sectors. One Dedicated Supply Partner.</h2>
+      <p class="mt-4 text-lg text-[#475569]">Select your sector to see exactly how Eurotech supports your projects — from first drawing to final commissioning.</p>
+    </div>
+
+    <div class="mt-12 lg:grid lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-10">
+      <!-- tab rail -->
+      <div class="tab-rail flex lg:flex-col gap-2 overflow-x-auto lg:overflow-visible -mx-4 px-4 lg:mx-0 lg:px-0 pb-2 lg:pb-0" role="tablist" aria-label="B2B sectors" aria-orientation="vertical">
+        <button type="button" role="tab" id="tab-0" aria-controls="panel-0" aria-selected="true" class="tab-btn group flex-none lg:w-full text-left rounded-xl border px-5 py-4 bg-brand-deep border-brand-deep text-white shadow-sm">
+          <span class="flex items-center justify-between gap-3">
+            <span>
+              <span class="seg-label block text-[11px] font-bold tracking-[0.16em] uppercase opacity-70">Segment 01</span>
+              <span class="block mt-1 font-display font-bold text-[15px] leading-snug">Plumbers &amp; Heating Contractors</span>
+            </span>
+            <svg class="w-4 h-4 flex-none opacity-60 group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+          </span>
+        </button>
+        <button type="button" role="tab" id="tab-1" aria-controls="panel-1" aria-selected="false" tabindex="-1" class="tab-btn group flex-none lg:w-full text-left rounded-xl border px-5 py-4 bg-white border-[#E2E8F0] text-brand-ink hover:border-brand-green/50">
+          <span class="flex items-center justify-between gap-3">
+            <span>
+              <span class="seg-label block text-[11px] font-bold tracking-[0.16em] uppercase text-brand-green">Segment 02</span>
+              <span class="block mt-1 font-display font-bold text-[15px] leading-snug">Architects &amp; M&amp;E Engineers</span>
+            </span>
+            <svg class="w-4 h-4 flex-none text-brand-green opacity-60 group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+          </span>
+        </button>
+        <button type="button" role="tab" id="tab-2" aria-controls="panel-2" aria-selected="false" tabindex="-1" class="tab-btn group flex-none lg:w-full text-left rounded-xl border px-5 py-4 bg-white border-[#E2E8F0] text-brand-ink hover:border-brand-green/50">
+          <span class="flex items-center justify-between gap-3">
+            <span>
+              <span class="seg-label block text-[11px] font-bold tracking-[0.16em] uppercase text-brand-green">Segment 03</span>
+              <span class="block mt-1 font-display font-bold text-[15px] leading-snug">Builders &amp; Property Developers</span>
+            </span>
+            <svg class="w-4 h-4 flex-none text-brand-green opacity-60 group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+          </span>
+        </button>
+        <button type="button" role="tab" id="tab-3" aria-controls="panel-3" aria-selected="false" tabindex="-1" class="tab-btn group flex-none lg:w-full text-left rounded-xl border px-5 py-4 bg-white border-[#E2E8F0] text-brand-ink hover:border-brand-green/50">
+          <span class="flex items-center justify-between gap-3">
+            <span>
+              <span class="seg-label block text-[11px] font-bold tracking-[0.16em] uppercase text-brand-green">Segment 04</span>
+              <span class="block mt-1 font-display font-bold text-[15px] leading-snug">Industrial &amp; Commercial Facilities</span>
+            </span>
+            <svg class="w-4 h-4 flex-none text-brand-green opacity-60 group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+          </span>
+        </button>
+      </div>
+
+      <!-- panels -->
+      <div class="mt-6 lg:mt-0 relative">
+        <!-- Panel 1: Plumbers -->
+        <div id="panel-0" role="tabpanel" aria-labelledby="tab-0" class="tab-panel rounded-2xl bg-white border border-[#E2E8F0] shadow-sm overflow-hidden">
+          <div class="relative h-52 sm:h-64">
+            <img src="images/sector-plumbers.jpg" alt="Heating engineer commissioning a heating system on site" class="w-full h-full object-cover" loading="lazy">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0B2E19]/80 via-transparent"></div>
+            <p class="absolute bottom-4 left-6 font-display font-extrabold text-white text-xl">Plumbers &amp; Heating Contractors</p>
+          </div>
+          <div class="p-6 sm:p-8">
+            <p class="text-[#475569]">Win more jobs and de-risk every install. Eurotech works as your technical back-office so you can quote with confidence and hand over systems that perform.</p>
+            <ul class="sq-list mt-5 space-y-2.5 text-[15px]">
+              <li>Exclusive trade pricing on heat pumps, eco4 RADIANT underfloor heating &amp; controls</li>
+              <li>Fast nationwide delivery from Irish stock</li>
+              <li>Full heat loss calculations &amp; system sizing for every project</li>
+              <li>On-site commissioning backup when you need it</li>
+              <li>SEAI grant paperwork support for your customers</li>
+            </ul>
+            <a href="#partner-form" class="btn-slide mt-7 items-center rounded-lg bg-brand-red px-6 py-3.5 text-sm font-bold text-white transition-colors hover:bg-brand-reddark">
+              <span class="lbl">Open a Plumber Trade Account</span>
+              <span class="lbl-alt" aria-hidden="true">Open a Plumber Trade Account</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Panel 2: Architects -->
+        <div id="panel-1" role="tabpanel" aria-labelledby="tab-1" hidden class="tab-panel rounded-2xl bg-white border border-[#E2E8F0] shadow-sm overflow-hidden">
+          <div class="relative h-52 sm:h-64">
+            <img src="images/sector-architects.jpg" alt="Architectural drawings and project plans on a desk" class="w-full h-full object-cover" loading="lazy">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0B2E19]/80 via-transparent"></div>
+            <p class="absolute bottom-4 left-6 font-display font-extrabold text-white text-xl">Architects &amp; M&amp;E Engineers</p>
+          </div>
+          <div class="p-6 sm:p-8">
+            <p class="text-[#475569]">Specify low-carbon heating with confidence. Our technical team supports your design intent from concept through to compliance sign-off.</p>
+            <ul class="sq-list mt-5 space-y-2.5 text-[15px]">
+              <li>Part L &amp; NZEB building regulations compliance support</li>
+              <li>Full CAD layouts &amp; underfloor heating schematics for your drawings</li>
+              <li>Bespoke low-carbon HVAC specifications written with our engineers</li>
+              <li>Dedicated technical specification support, direct to our design desk</li>
+            </ul>
+            <a href="#partner-form" class="btn-slide mt-7 items-center rounded-lg bg-brand-red px-6 py-3.5 text-sm font-bold text-white transition-colors hover:bg-brand-reddark">
+              <span class="lbl">Request Architect Specification Pack</span>
+              <span class="lbl-alt" aria-hidden="true">Request Architect Specification Pack</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Panel 3: Builders -->
+        <div id="panel-2" role="tabpanel" aria-labelledby="tab-2" hidden class="tab-panel rounded-2xl bg-white border border-[#E2E8F0] shadow-sm overflow-hidden">
+          <div class="relative h-52 sm:h-64">
+            <img src="images/sector-builders.jpg" alt="Construction site of a new housing development" class="w-full h-full object-cover" loading="lazy">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0B2E19]/80 via-transparent"></div>
+            <p class="absolute bottom-4 left-6 font-display font-extrabold text-white text-xl">Builders &amp; Property Developers</p>
+          </div>
+          <div class="p-6 sm:p-8">
+            <p class="text-[#475569]">A2-ready heating packages for whole developments — priced for volume, scheduled to your programme, and managed end to end.</p>
+            <ul class="sq-list mt-5 space-y-2.5 text-[15px]">
+              <li>Volume trade pricing &amp; guaranteed stock allocation per phase</li>
+              <li>Turnkey supply, install &amp; commissioning for housing developments</li>
+              <li>Full heating design &amp; A2 BER ready packages for every unit</li>
+              <li>Dedicated project management from tender to handover</li>
+            </ul>
+            <a href="#partner-form" class="btn-slide mt-7 items-center rounded-lg bg-brand-red px-6 py-3.5 text-sm font-bold text-white transition-colors hover:bg-brand-reddark">
+              <span class="lbl">Request a Development Quote</span>
+              <span class="lbl-alt" aria-hidden="true">Request a Development Quote</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Panel 4: Industrial -->
+        <div id="panel-3" role="tabpanel" aria-labelledby="tab-3" hidden class="tab-panel rounded-2xl bg-white border border-[#E2E8F0] shadow-sm overflow-hidden">
+          <div class="relative h-52 sm:h-64">
+            <img src="images/sector-industrial.jpg" alt="Industrial trade work inside a manufacturing facility" class="w-full h-full object-cover" loading="lazy">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0B2E19]/80 via-transparent"></div>
+            <p class="absolute bottom-4 left-6 font-display font-extrabold text-white text-xl">Industrial &amp; Commercial Facilities</p>
+          </div>
+          <div class="p-6 sm:p-8">
+            <p class="text-[#475569]">Cut running costs and carbon across your estate with high-output systems engineered, installed and maintained by one accountable partner.</p>
+            <ul class="sq-list mt-5 space-y-2.5 text-[15px]">
+              <li>High-output cascade heat pump systems for warehouses, factories, hotels &amp; offices</li>
+              <li>Commercial energy audits with clear payback analysis</li>
+              <li>Turnkey installation &amp; planned maintenance programmes</li>
+              <li>SEAI commercial grants &amp; Accelerated Capital Allowance (ACA) tax relief guidance</li>
+            </ul>
+            <a href="#partner-form" class="btn-slide mt-7 items-center rounded-lg bg-brand-red px-6 py-3.5 text-sm font-bold text-white transition-colors hover:bg-brand-reddark">
+              <span class="lbl">Book a Commercial Site Audit</span>
+              <span class="lbl-alt" aria-hidden="true">Book a Commercial Site Audit</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- overview cards -->
+    <div class="mt-14 grid sm:grid-cols-2 xl:grid-cols-4 gap-5">
+      <button type="button" data-card-tab="0" class="reveal group text-left rounded-2xl bg-white border border-[#E2E8F0] p-6 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg hover:border-brand-green/40">
+        <svg class="w-8 h-8 text-brand-green" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.8 2.8-2.1-2.1 2.9-2.7z"/></svg>
+        <h3 class="mt-4 font-display font-bold text-brand-deep text-lg leading-snug">Plumbers &amp; Heating Contractors</h3>
+        <p class="mt-2 text-sm text-[#475569]">Trade pricing, fast stock, design backup and commissioning support on every job.</p>
+        <span class="mt-4 inline-flex items-center gap-1.5 text-sm font-bold text-brand-green">Explore sector <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+      </button>
+      <button type="button" data-card-tab="1" class="reveal group text-left rounded-2xl bg-white border border-[#E2E8F0] p-6 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg hover:border-brand-green/40">
+        <svg class="w-8 h-8 text-brand-green" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 19l7-7 3 3-7 7-3-3zM18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5zM2 2l7.6 7.6"/><circle cx="11" cy="11" r="2"/></svg>
+        <h3 class="mt-4 font-display font-bold text-brand-deep text-lg leading-snug">Architects &amp; M&amp;E Engineers</h3>
+        <p class="mt-2 text-sm text-[#475569]">Part L &amp; NZEB compliance, CAD schematics and bespoke HVAC specifications.</p>
+        <span class="mt-4 inline-flex items-center gap-1.5 text-sm font-bold text-brand-green">Explore sector <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+      </button>
+      <button type="button" data-card-tab="2" class="reveal group text-left rounded-2xl bg-white border border-[#E2E8F0] p-6 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg hover:border-brand-green/40">
+        <svg class="w-8 h-8 text-brand-green" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-4h6v4M9 11h.01M15 11h.01M9 15h.01M15 15h.01"/></svg>
+        <h3 class="mt-4 font-display font-bold text-brand-deep text-lg leading-snug">Builders &amp; Property Developers</h3>
+        <p class="mt-2 text-sm text-[#475569]">Volume pricing, guaranteed stock and turnkey A2 BER ready heating packages.</p>
+        <span class="mt-4 inline-flex items-center gap-1.5 text-sm font-bold text-brand-green">Explore sector <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+      </button>
+      <button type="button" data-card-tab="3" class="reveal group text-left rounded-2xl bg-white border border-[#E2E8F0] p-6 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg hover:border-brand-green/40">
+        <svg class="w-8 h-8 text-brand-green" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M2 20h20M4 20V8l5 3V8l5 3V4h6v16"/></svg>
+        <h3 class="mt-4 font-display font-bold text-brand-deep text-lg leading-snug">Industrial &amp; Commercial Facilities</h3>
+        <p class="mt-2 text-sm text-[#475569]">Cascade heat pump systems, energy audits and SEAI / ACA grant guidance.</p>
+        <span class="mt-4 inline-flex items-center gap-1.5 text-sm font-bold text-brand-green">Explore sector <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 4-STEP PROCESS ============ -->
+<section id="process" class="bg-white py-20 sm:py-24">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="reveal max-w-3xl">
+      <p class="mini-title">How We Support Your Projects</p>
+      <h2 class="mt-4 font-display font-extrabold tracking-tight text-brand-deep text-3xl sm:text-4xl leading-tight">From First Drawing to Final Commissioning</h2>
+    </div>
+    <ol class="process-grid mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
+      <li class="reveal relative">
+        <span class="relative z-10 flex items-center justify-center w-[68px] h-[68px] rounded-2xl bg-brand-deep text-white font-display font-extrabold text-xl shadow-md">01</span>
+        <h3 class="mt-5 font-display font-bold text-brand-deep text-lg">Send Plans / Project Brief</h3>
+        <p class="mt-2 text-[15px] text-[#475569]">Email your drawings or brief to our technical desk — any format, any stage of design.</p>
+      </li>
+      <li class="reveal relative">
+        <span class="relative z-10 flex items-center justify-center w-[68px] h-[68px] rounded-2xl bg-brand-deep text-white font-display font-extrabold text-xl shadow-md">02</span>
+        <h3 class="mt-5 font-display font-bold text-brand-deep text-lg">Heat Loss &amp; CAD System Design</h3>
+        <p class="mt-2 text-[15px] text-[#475569]">We size the system, produce full heat loss calculations, CAD layouts and a priced specification.</p>
+      </li>
+      <li class="reveal relative">
+        <span class="relative z-10 flex items-center justify-center w-[68px] h-[68px] rounded-2xl bg-brand-deep text-white font-display font-extrabold text-xl shadow-md">03</span>
+        <h3 class="mt-5 font-display font-bold text-brand-deep text-lg">Fast Nationwide Supply</h3>
+        <p class="mt-2 text-[15px] text-[#475569]">Equipment delivered from Irish stock to your site, scheduled to your build programme.</p>
+      </li>
+      <li class="reveal relative">
+        <span class="relative z-10 flex items-center justify-center w-[68px] h-[68px] rounded-2xl bg-brand-deep text-white font-display font-extrabold text-xl shadow-md">04</span>
+        <h3 class="mt-5 font-display font-bold text-brand-deep text-lg">On-Site Commissioning &amp; Aftercare</h3>
+        <p class="mt-2 text-[15px] text-[#475569]">Our engineers commission the system on site and stay available for the life of the installation.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ WHY PARTNER WITH US ============ -->
+<section id="why-partner" class="bg-brand-forest py-20 sm:py-24 text-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+    <div class="reveal">
+      <p class="mini-title mini-title--light">Why Partner With Us</p>
+      <h2 class="mt-4 font-display font-extrabold tracking-tight text-3xl sm:text-4xl leading-tight">One Accountable Partner for Design, Supply &amp; Commissioning</h2>
+      <p class="mt-5 text-white/80 text-lg leading-relaxed">Eurotech Renewables is an Irish renewable heating specialist working exclusively to professional standards — the same team that delivered the award-winning St.&nbsp;Bernadette's Church eco4 conservation heating project.</p>
+      <ul class="mt-8 space-y-4">
+        <li class="flex gap-3.5">
+          <svg class="w-6 h-6 text-[#7BD2A0] flex-none mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m8.5 12.5 2.5 2.5 5-5"/></svg>
+          <span><strong class="font-semibold">Complete system, one source</strong> — heat pumps, eco4 RADIANT underfloor heating, cylinders and controls designed to work together.</span>
+        </li>
+        <li class="flex gap-3.5">
+          <svg class="w-6 h-6 text-[#7BD2A0] flex-none mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m8.5 12.5 2.5 2.5 5-5"/></svg>
+          <span><strong class="font-semibold">Design-led supply</strong> — every quotation is backed by heat loss calculations and CAD schematics, not guesswork.</span>
+        </li>
+        <li class="flex gap-3.5">
+          <svg class="w-6 h-6 text-[#7BD2A0] flex-none mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m8.5 12.5 2.5 2.5 5-5"/></svg>
+          <span><strong class="font-semibold">Compliance built in</strong> — Part L, NZEB and A2 BER documentation packs prepared as standard.</span>
+        </li>
+        <li class="flex gap-3.5">
+          <svg class="w-6 h-6 text-[#7BD2A0] flex-none mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m8.5 12.5 2.5 2.5 5-5"/></svg>
+          <span><strong class="font-semibold">Irish stock, nationwide reach</strong> — trade-only pricing with delivery to all 26 counties.</span>
+        </li>
+      </ul>
+    </div>
+    <div class="reveal relative">
+      <div class="rounded-2xl overflow-hidden shadow-2xl">
+        <img src="images/partner.jpg" alt="Eurotech technical team reviewing project plans with a trade partner" class="w-full h-full object-cover aspect-[4/3]" loading="lazy">
+      </div>
+      <div class="absolute -bottom-6 left-6 right-6 sm:right-auto rounded-xl bg-white text-brand-ink shadow-xl px-6 py-5 flex items-center gap-4">
+        <svg class="w-9 h-9 text-[#C9A45C] flex-none" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 4.9 5.4.8-3.9 3.8.9 5.4-4.8-2.5-4.8 2.5.9-5.4L4.2 7.7l5.4-.8L12 2z"/></svg>
+        <p class="text-sm font-semibold leading-snug">SEAI Energy Awards 2026 — Winner,<br><span class="text-[#475569] font-normal">Low Carbon Technologies Innovation</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LEAD CAPTURE FORM ============ -->
+<section id="partner-form" class="bg-brand-mist py-20 sm:py-24">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] gap-12 items-start">
+    <div class="reveal">
+      <p class="mini-title">Partner With Eurotech</p>
+      <h2 class="mt-4 font-display font-extrabold tracking-tight text-brand-deep text-3xl sm:text-4xl leading-tight">Get Trade Access &amp; Pricing</h2>
+      <p class="mt-4 text-lg text-[#475569] max-w-xl">Tell us who you are and what you're working on. Our trade desk will come back to you with pricing, design support and next steps.</p>
+
+      <form id="lead-form" class="mt-9 grid sm:grid-cols-2 gap-5" novalidate>
+        <div>
+          <label for="f-name" class="block text-sm font-semibold mb-1.5">Full Name <span class="text-brand-red" aria-hidden="true">*</span></label>
+          <input id="f-name" name="name" type="text" autocomplete="name" required class="w-full rounded-lg border border-[#CBD5E1] bg-white px-4 py-3 text-[15px] outline-none transition-colors focus:border-brand-green" placeholder="e.g. Patrick Murphy">
+          <p class="err hidden mt-1.5 text-sm text-brand-reddark" id="err-name">Please enter your full name.</p>
+        </div>
+        <div>
+          <label for="f-company" class="block text-sm font-semibold mb-1.5">Company Name <span class="text-brand-red" aria-hidden="true">*</span></label>
+          <input id="f-company" name="company" type="text" autocomplete="organization" required class="w-full rounded-lg border border-[#CBD5E1] bg-white px-4 py-3 text-[15px] outline-none transition-colors focus:border-brand-green" placeholder="e.g. Murphy Heating Ltd">
+          <p class="err hidden mt-1.5 text-sm text-brand-reddark" id="err-company">Please enter your company name.</p>
+        </div>
+        <div>
+          <label for="f-role" class="block text-sm font-semibold mb-1.5">Role / Sector <span class="text-brand-red" aria-hidden="true">*</span></label>
+          <select id="f-role" name="role" required class="w-full rounded-lg border border-[#CBD5E1] bg-white px-4 py-3 text-[15px] outline-none transition-colors focus:border-brand-green">
+            <option value="" selected disabled>Select your sector…</option>
+            <option>Plumber / Heating Contractor</option>
+            <option>Architect / M&amp;E Engineer</option>
+            <option>Builder / Property Developer</option>
+            <option>Industrial / Commercial Client</option>
+          </select>
+          <p class="err hidden mt-1.5 text-sm text-brand-reddark" id="err-role">Please select your sector.</p>
+        </div>
+        <div>
+          <label for="f-county" class="block text-sm font-semibold mb-1.5">County <span class="text-brand-red" aria-hidden="true">*</span></label>
+          <select id="f-county" name="county" required class="w-full rounded-lg border border-[#CBD5E1] bg-white px-4 py-3 text-[15px] outline-none transition-colors focus:border-brand-green">
+            <option value="" selected disabled>Select county…</option>
+            <option>Carlow</option><option>Cavan</option><option>Clare</option><option>Cork</option>
+            <option>Donegal</option><option>Dublin</option><option>Galway</option><option>Kerry</option>
+            <option>Kildare</option><option>Kilkenny</option><option>Laois</option><option>Leitrim</option>
+            <option>Limerick</option><option>Longford</option><option>Louth</option><option>Mayo</option>
+            <option>Meath</option><option>Monaghan</option><option>Offaly</option><option>Roscommon</option>
+            <option>Sligo</option><option>Tipperary</option><option>Waterford</option><option>Westmeath</option>
+            <option>Wexford</option><option>Wicklow</option>
+          </select>
+          <p class="err hidden mt-1.5 text-sm text-brand-reddark" id="err-county">Please select your county.</p>
+        </div>
+        <div>
+          <label for="f-phone" class="block text-sm font-semibold mb-1.5">Phone Number <span class="text-brand-red" aria-hidden="true">*</span></label>
+          <input id="f-phone" name="phone" type="tel" autocomplete="tel" required class="w-full rounded-lg border border-[#CBD5E1] bg-white px-4 py-3 text-[15px] outline-none transition-colors focus:border-brand-green" placeholder="+353 …">
+          <p class="err hidden mt-1.5 text-sm text-brand-reddark" id="err-phone">Please enter a valid phone number.</p>
+        </div>
+        <div>
+          <label for="f-email" class="block text-sm font-semibold mb-1.5">Email <span class="text-brand-red" aria-hidden="true">*</span></label>
+          <input id="f-email" name="email" type="email" autocomplete="email" required class="w-full rounded-lg border border-[#CBD5E1] bg-white px-4 py-3 text-[15px] outline-none transition-colors focus:border-brand-green" placeholder="you@company.ie">
+          <p class="err hidden mt-1.5 text-sm text-brand-reddark" id="err-email">Please enter a valid email address.</p>
+        </div>
+        <div class="sm:col-span-2">
+          <label for="f-msg" class="block text-sm font-semibold mb-1.5">Project Details <span class="text-[#64748B] font-normal">(optional)</span></label>
+          <textarea id="f-msg" name="message" rows="4" class="w-full rounded-lg border border-[#CBD5E1] bg-white px-4 py-3 text-[15px] outline-none transition-colors focus:border-brand-green" placeholder="Project type, location, approximate size or number of units…"></textarea>
+        </div>
+        <div class="sm:col-span-2">
+          <button type="submit" class="btn-slide w-full sm:w-auto items-center justify-center rounded-lg bg-brand-red px-8 py-4 text-base font-bold text-white shadow-sm transition-colors hover:bg-brand-reddark">
+            <span class="lbl">Get Trade Access &amp; Pricing</span>
+            <span class="lbl-alt" aria-hidden="true">Get Trade Access &amp; Pricing</span>
+          </button>
+          <p class="mt-3 text-sm text-[#64748B]">No spam, no obligation — a member of our trade desk will respond directly.</p>
+        </div>
+      </form>
+
+      <!-- success state -->
+      <div id="form-success" hidden tabindex="-1" class="mt-9 rounded-2xl border border-brand-green/30 bg-white p-8 shadow-sm">
+        <div class="flex items-start gap-4">
+          <svg class="w-10 h-10 text-brand-green flex-none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m8.5 12.5 2.5 2.5 5-5"/></svg>
+          <div>
+            <h3 class="font-display font-bold text-brand-deep text-xl">Request received — thank you<span id="success-name"></span>.</h3>
+            <p class="mt-2 text-[#475569]">Our Trade &amp; Commercial Desk will review your details and contact you shortly with trade access and pricing. For anything urgent, call us directly on <a href="tel:+353429749479" class="font-semibold text-brand-green hover:underline">+353 (0) 42 974 9479</a>.</p>
+            <button type="button" id="form-reset" class="mt-5 inline-flex items-center rounded-lg border border-[#CBD5E1] px-5 py-2.5 text-sm font-semibold text-brand-ink transition-colors hover:bg-brand-mist">Send another enquiry</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- contact aside -->
+    <aside class="reveal rounded-2xl bg-brand-deep text-white p-8 lg:sticky lg:top-28 shadow-xl">
+      <h3 class="font-display font-extrabold text-xl">Talk to the Trade Desk</h3>
+      <p class="mt-3 text-white/80 text-[15px]">Prefer to talk it through? Our technical team is available for spec queries, pricing and site support.</p>
+      <ul class="mt-6 space-y-4 text-[15px]">
+        <li class="flex items-center gap-3">
+          <svg class="w-5 h-5 text-[#7BD2A0] flex-none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <a href="tel:+353429749479" class="font-semibold hover:underline underline-offset-2">+353 (0) 42 974 9479</a>
+        </li>
+        <li class="flex items-center gap-3">
+          <svg class="w-5 h-5 text-[#7BD2A0] flex-none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+          <a href="mailto:info@eurotech-heating.com" class="hover:underline underline-offset-2">info@eurotech-heating.com</a>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="w-5 h-5 text-[#7BD2A0] flex-none mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>Rossullus Walk, Castleblayney,<br>Co. Monaghan, A75 W407, Ireland</span>
+        </li>
+        <li class="flex items-center gap-3">
+          <svg class="w-5 h-5 text-[#7BD2A0] flex-none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          <span>Mon–Fri, 8:30–17:30</span>
+        </li>
+      </ul>
+      <div class="mt-8 border-t border-white/15 pt-6">
+        <p class="text-[11px] font-bold tracking-[0.18em] uppercase text-[#7BD2A0]">Also from Eurotech</p>
+        <p class="mt-2 font-display font-bold text-lg">eco4 RADIANT <span class="font-body font-normal text-white/75 text-sm">Underfloor Heating</span></p>
+        <p class="mt-1.5 text-sm text-white/70">Award-winning low-temperature radiant systems for new builds, renovations and heritage projects.</p>
+      </div>
+    </aside>
+  </div>
+</section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="bg-brand-forest text-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 grid gap-10 md:grid-cols-3">
+    <div>
+      <div class="flex items-center gap-3">
+        <span class="w-10 h-10 rounded-lg bg-white/10 border border-white/15 flex items-center justify-center relative" aria-hidden="true">
+          <span class="font-display font-extrabold text-white text-xl leading-none">E</span>
+          <span class="absolute bottom-1 right-1 w-2 h-2 bg-brand-red rounded-[2px]"></span>
+        </span>
+        <span class="leading-tight">
+          <span class="block font-display font-extrabold tracking-tight text-lg">EUROTECH <span class="text-brand-red">RENEWABLES</span></span>
+          <span class="block text-[10px] font-semibold tracking-[0.22em] uppercase text-[#7BD2A0]">Climate &amp; Energy Solutions</span>
+        </span>
+      </div>
+      <p class="mt-4 text-sm text-white/70 max-w-xs">Eurotech Renewables Ltd · eco4 RADIANT Underfloor Heating. Trade &amp; commercial renewable heating systems, designed and supplied across Ireland.</p>
+    </div>
+    <nav aria-label="Sector links">
+      <p class="text-[11px] font-bold tracking-[0.18em] uppercase text-[#7BD2A0]">Sectors</p>
+      <ul class="mt-4 space-y-2.5 text-[15px]">
+        <li><a href="#sectors" data-sector-link="0" class="text-white/80 hover:text-white transition-colors">Plumbers &amp; Heating Contractors</a></li>
+        <li><a href="#sectors" data-sector-link="1" class="text-white/80 hover:text-white transition-colors">Architects &amp; M&amp;E Engineers</a></li>
+        <li><a href="#sectors" data-sector-link="2" class="text-white/80 hover:text-white transition-colors">Builders &amp; Property Developers</a></li>
+        <li><a href="#sectors" data-sector-link="3" class="text-white/80 hover:text-white transition-colors">Industrial &amp; Commercial Facilities</a></li>
+      </ul>
+    </nav>
+    <div>
+      <p class="text-[11px] font-bold tracking-[0.18em] uppercase text-[#7BD2A0]">Contact</p>
+      <ul class="mt-4 space-y-2.5 text-[15px] text-white/80">
+        <li>Tel: <a href="tel:+353429749479" class="font-semibold text-white hover:underline underline-offset-2">+353 (0) 42 974 9479</a></li>
+        <li><a href="mailto:info@eurotech-heating.com" class="hover:text-white transition-colors">info@eurotech-heating.com</a></li>
+        <li><a href="https://www.eurotechrenewables.ie" target="_blank" rel="noopener" class="hover:text-white transition-colors">www.eurotechrenewables.ie</a></li>
+        <li>Castleblayney, Co. Monaghan, Ireland</li>
+      </ul>
+    </div>
+  </div>
+  <div class="border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-2 text-[13px] text-white/55">
+      <p>© <span id="year">2026</span> Eurotech Renewables Ltd. All rights reserved.</p>
+      <p>SEAI Registered · Part L &amp; NZEB Compliant · Nationwide Delivery</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+  document.documentElement.classList.add('js');
+
+  /* ---------- footer year ---------- */
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  /* ---------- header shrink ---------- */
+  var header = document.querySelector('.site-header');
+  var onScroll = function () { header.classList.toggle('scrolled', window.scrollY > 12); };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  /* ---------- mobile menu ---------- */
+  var menuBtn = document.getElementById('menu-btn');
+  var mobileMenu = document.getElementById('mobile-menu');
+  var iconOpen = document.getElementById('menu-icon-open');
+  var iconClose = document.getElementById('menu-icon-close');
+  function setMenu(open) {
+    mobileMenu.classList.toggle('hidden', !open);
+    iconOpen.classList.toggle('hidden', open);
+    iconClose.classList.toggle('hidden', !open);
+    menuBtn.setAttribute('aria-expanded', String(open));
+    menuBtn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  }
+  menuBtn.addEventListener('click', function () {
+    setMenu(mobileMenu.classList.contains('hidden'));
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !mobileMenu.classList.contains('hidden')) { setMenu(false); menuBtn.focus(); }
+  });
+  mobileMenu.querySelectorAll('.mobile-link').forEach(function (a) {
+    a.addEventListener('click', function () { setMenu(false); });
+  });
+
+  /* ---------- sector tabs ---------- */
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('[role="tab"]'));
+  var panels = tabs.map(function (t) { return document.getElementById(t.getAttribute('aria-controls')); });
+  var ACTIVE = ['bg-brand-deep', 'border-brand-deep', 'text-white', 'shadow-sm'];
+  var IDLE = ['bg-white', 'border-[#E2E8F0]', 'text-brand-ink'];
+
+  function activateTab(i, focus) {
+    tabs.forEach(function (tab, j) {
+      var active = i === j;
+      tab.setAttribute('aria-selected', String(active));
+      tab.tabIndex = active ? 0 : -1;
+      tab.classList.remove.apply(tab.classList, ACTIVE.concat(IDLE));
+      tab.classList.add.apply(tab.classList, active ? ACTIVE : IDLE);
+      var label = tab.querySelector('.seg-label');
+      if (label) {
+        label.classList.toggle('opacity-70', active);
+        label.classList.toggle('text-brand-green', !active);
+      }
+      var chevron = tab.querySelector('svg');
+      if (chevron) { chevron.classList.toggle('text-brand-green', !active); }
+      var panel = panels[j];
+      if (active) {
+        panel.hidden = false;
+        panel.classList.add('switching');
+        requestAnimationFrame(function () {
+          requestAnimationFrame(function () { panel.classList.remove('switching'); });
+        });
+      } else {
+        panel.hidden = true;
+      }
+    });
+    if (focus) { tabs[i].focus(); }
+  }
+  tabs.forEach(function (tab, i) {
+    tab.addEventListener('click', function () { activateTab(i); });
+    tab.addEventListener('keydown', function (e) {
+      var next = null;
+      if (e.key === 'ArrowDown' || e.key === 'ArrowRight') { next = (i + 1) % tabs.length; }
+      if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') { next = (i - 1 + tabs.length) % tabs.length; }
+      if (e.key === 'Home') { next = 0; }
+      if (e.key === 'End') { next = tabs.length - 1; }
+      if (next !== null) { e.preventDefault(); activateTab(next, true); }
+    });
+  });
+
+  /* nav / footer sector links + overview cards activate the matching tab */
+  document.querySelectorAll('[data-sector-link]').forEach(function (a) {
+    a.addEventListener('click', function () { activateTab(Number(a.getAttribute('data-sector-link'))); });
+  });
+  document.querySelectorAll('[data-card-tab]').forEach(function (card) {
+    card.addEventListener('click', function () {
+      var i = Number(card.getAttribute('data-card-tab'));
+      activateTab(i);
+      document.getElementById('sectors').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+
+  /* ---------- hero entrance (staggered) ---------- */
+  var heroEls = document.querySelectorAll('.hero-anim');
+  heroEls.forEach(function (el, i) {
+    setTimeout(function () { el.classList.add('in'); }, 120 + i * 110);
+  });
+
+  /* ---------- scroll reveal ---------- */
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) { en.target.classList.add('in-view'); io.unobserve(en.target); }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('in-view'); });
+  }
+
+  /* ---------- retry images on flaky connections ---------- */
+  document.querySelectorAll('img').forEach(function (img) {
+    var attempts = 0;
+    img.addEventListener('error', function () {
+      if (attempts >= 2) { return; }
+      attempts++;
+      var src = img.src;
+      setTimeout(function () { img.src = src; }, 1500 * attempts);
+    });
+  });
+
+  /* ---------- lead form ---------- */
+  var form = document.getElementById('lead-form');
+  var success = document.getElementById('form-success');
+  var fields = [
+    { el: document.getElementById('f-name'),    err: 'err-name',    test: function (v) { return v.trim().length > 1; } },
+    { el: document.getElementById('f-company'), err: 'err-company', test: function (v) { return v.trim().length > 1; } },
+    { el: document.getElementById('f-role'),    err: 'err-role',    test: function (v) { return v !== ''; } },
+    { el: document.getElementById('f-county'),  err: 'err-county',  test: function (v) { return v !== ''; } },
+    { el: document.getElementById('f-phone'),   err: 'err-phone',   test: function (v) { return /^[+()\-.\s\d]{7,}$/.test(v.trim()); } },
+    { el: document.getElementById('f-email'),   err: 'err-email',   test: function (v) { return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim()); } }
+  ];
+  function setFieldState(f, ok) {
+    document.getElementById(f.err).classList.toggle('hidden', ok);
+    f.el.classList.toggle('border-brand-reddark', !ok);
+    f.el.classList.toggle('ring-2', !ok);
+    f.el.classList.toggle('ring-brand-reddark/30', !ok);
+    f.el.setAttribute('aria-invalid', String(!ok));
+    if (!ok) { f.el.setAttribute('aria-describedby', f.err); } else { f.el.removeAttribute('aria-describedby'); }
+  }
+  fields.forEach(function (f) {
+    f.el.addEventListener('input', function () { setFieldState(f, true); });
+    f.el.addEventListener('change', function () { setFieldState(f, true); });
+  });
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var firstBad = null;
+    fields.forEach(function (f) {
+      var ok = f.test(f.el.value);
+      setFieldState(f, ok);
+      if (!ok && !firstBad) { firstBad = f.el; }
+    });
+    if (firstBad) { firstBad.focus(); return; }
+    document.getElementById('success-name').textContent = ', ' + document.getElementById('f-name').value.trim().split(' ')[0];
+    form.hidden = true;
+    success.hidden = false;
+    success.focus({ preventScroll: true });
+    success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+  document.getElementById('form-reset').addEventListener('click', function () {
+    form.reset();
+    form.hidden = false;
+    success.hidden = true;
+    document.getElementById('f-name').focus();
+  });
+})();
+</script>
+</body>
+</html>
